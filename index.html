@@ -1,0 +1,21 @@
+<div id="container" style="max-width:300px">
+  <script src = "main.js"> </script>
+  <canvas id="points">
+  </canvas>
+  <canvas id="scene">
+  </canvas>
+
+  <script>
+    const scene = document.getElementById("scene");
+    const pointsCanv = document.getElementById("points");
+    const container = document.getElementById("container");
+    const ctx = scene.getContext("2d");
+    const ctxPoints = pointsCanv.getContext("2d");
+        drawScene();
+    document.addEventListener("keydown", moveCube);
+    spawnCube();
+    setInterval(function () {
+      loop();
+    }, 10);
+  </script>
+</div>
